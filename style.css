@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body{
+    font-size: 1rem;
+    background-color: lightpink;
+}
+
+/* --------------------EMPIZA DESARROLLO DE CABECERA LOGO Y NAVEGADORES-------------------- */
+
+.cabecera{
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2em;
+}
+ .cabeceraLogo img{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+ }
+
+.cabeceraMenu .menuLista{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+ .cabeceraMenu .menuLista a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+ }
+
+/* --------------------TERMINA DESARROLLO DE CABECERA LOGO Y NAVEGADORES-------------------- */
+
+/* --------------------EMPIEZA SECTION 1 BANNER --------------------*/
+
+.banner{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2020/01/21193949/lago-sandoval-bote.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 99vh;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    z-index: -1;
+
+}
+
+.bannerTexto1{
+    background-color: blue;
+    color: white;
+    position: relative;
+    top: 40%;
+    left: 40%;
+}
+
+.bannerTexto1 h1{
+    font-size: 7rem;
+}
+
+.bannerTexto1 p{
+    font-size: 1.5rem;
+}
+
