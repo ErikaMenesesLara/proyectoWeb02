@@ -6,17 +6,24 @@
 
 body{
     width: 100%;
-    height: auto;
+    height: 99vh;
+    overflow: auto;
     font-size: 1rem;
-    background-color: rgb(247, 247, 247);
+    font-family: 'Cairo', sans-serif;
+    font-weight: lighter;
+    background-color: #101419;
+    /* color: #EFF1ED; */
+    color: #CCD0D7;
 }
 
 /* --------------------EMPIZA DESARROLLO DE CABECERA LOGO Y NAVEGADORES-------------------- */
 
 .cabecera{
-    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+    background:linear-gradient(rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.1));
+    /* background: transparent; */
     width: 100%;
     height: 4rem;
+    padding-top: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,8 +36,8 @@ body{
     padding-left: 3em;
 }
  .cabeceraLogo img{
-    width: 10vh;
-    height: 10vh;
+    width: 14vh;
+    height: 13vh;
     border-radius: 50%;
  }
 .cabeceraMenu .menuLista{
@@ -42,35 +49,61 @@ body{
 }
 .cabeceraMenu .menuLista a{
     text-decoration: none;
-    color: white;
+    border-bottom: 0.3em solid transparent;
     font-weight: bold;
+    color: #EFF1ED;
+    padding: 0.5em;
+    text-transform: uppercase;
 }
+.cabeceraMenu .menuLista a:hover{
+    /* background: linear-gradient(rgba(16, 20, 25, 0.1), rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.3)); */
+    border-bottom: 0.1em solid #FFC750;
+    border-radius: 5px;
+}
+
 
 /* --------------------TERMINA DESARROLLO DE CABECERA LOGO Y NAVEGADORES-------------------- */
 
 /* --------------------EMPIEZA SECTION 1 BANNER --------------------*/
 
 .banner{
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url("https://free4kwallpapers.com/uploads/originals/2015/10/23/laguna-churup-ancash-region-of-peruoc-wallpaper.jpg");
+    background: linear-gradient(rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 1)), url(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CG2ZTCRLSZHE7HICLCSIHUWTWA.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 80vh;
+    height: 99vh;
     overflow: hidden;
     z-index: -1;
 }
 .bannerTexto1{
-    color: white;
+    /* color: white; */
     position: relative;
     top: 40%;
     display: grid;
     justify-items: center;
 }
 .bannerTexto1 h1{
-    font-size: 5rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 3rem;
 }
 .bannerTexto1 p{
+    font-family: 'Cairo', sans-serif;
     font-size: 1rem;
+}
+.bannerTexto1 a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: #313E64;
+    background-color: #FFC750;
+    padding: 0.5em 2.5em;
+    margin-top: 2em;
+    border-radius: 1em;
+}
+.bannerTexto1 a:hover{
+    border: 0.1em solid #FFC750;
+    background-color: transparent;
+    color: #CCD0D7;
+    /* background-color: #e8b037; */
 }
 
 /* --------------------TERMINA SECTION 1 BANNER --------------------*/
@@ -78,10 +111,11 @@ body{
 /* --------------------EMPIEZA SECTION 2 TEXTO DE PRESENTACION DE PERU --------------------*/
 
 .textoPresentacion{
-    background-color:rgb(0, 0, 0);
-    color: white;
+    background: linear-gradient(rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.1));
+    /* background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5), rgba(0,0,0,0.1)); */
+    /* color: white; */
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     text-align: center;
     display: grid;
     align-items: center;
@@ -94,109 +128,453 @@ body{
 
 /* --------------------EMPIEZA SECTION 3 DESTINOS EN PERU --------------------*/
 
-/* CARRUCEL DE IMAGENES QUE MUESTRA LOS DESTINOS MAS VISITADOS DE PERU.*/
+/* ELECCIOON DE IMAGENES QUE MUESTRAn LOS DESTINOS MAS VISITADOS DE PERU.*/
 
 .destinosPeru{
     width: 100%;
     height: 99vh;
-    background-color: #f4f4f4;
-    display: flex;
+    padding-top: 2em;
+    background-color: #e8e9eb;
+    display: grid;
+    /* gap: 0.1em; */
     justify-content: center;
-    align-items: center ;
+    grid-template-rows:20% 80%;
+    grid-template-columns: 0.5fr 80% 0.5fr;
+    grid-template-areas: "titulo titulo titulo"
+                         "izquierda destinos derecha";
 }
-.destinosCarrucel{
-    width: 50%;
-    height: 70%;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0em 0.5em 2em #000000;
-    border-radius: 1em;
+.destinosPeru h2{
+    color: #313E64;
+    grid-area: titulo;
+    grid-column: 2;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    display: grid;      
+    /* align-items: flex-end; */
+    border-left: 0.2em solid #FFC750; 
 }
-.destinosCarrucel img{
+/* UBICACIOON DE LA FLECHA IZQUIERDA */
+.destinosIzquierda{
+    grid-area: izquierda;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+}
+.destinosIzquierda .botonIzquierdo{
+    width: 3em;
+    height: 3em;
+    background-color: #e8e9eb;
+    color: #313E64;
+    border: 0.1em solid #CCD0D7 ;
+    border-radius: 50%; 
+    box-shadow: 0 2px 12px #CCD0D7;
+}
+.destinosIzquierda .botonIzquierdo:hover{
+    background-color: #313E64;
+    color: #CCD0D7;
+    transition: all ease-in 300ms;
+}
+/* UBICACIOON DE LA FLECHA DERECHA */
+.destinosDerecha{
+    grid-area: derecha;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+}
+.destinosDerecha .botonDerecho{
+    width: 3em;
+    height: 3em;
+    background-color: #e8e9eb;
+    color: #313E64;
+    border: 0.1em solid #CCD0D7 ;
+    border-radius: 50%; 
+    box-shadow: 0 2px 12px #CCD0D7;
+}
+.destinosDerecha .botonDerecho:hover{
+    background-color: #313E64;
+    color: #CCD0D7;
+    transition: all ease-in 300ms;
+}
+/* UBICACION DE LOS DESTINOS A ELEGGIR */
+/* DESTINOS ELECCION SERIA EL CONTENEDOR PADRE DE LAS 4 TARJETAS */
+.destinosEleccion{
+    grid-area: destinos;
+    width: 90%;
+    padding-left: 4em;
+    padding-right: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+.destino1{
+    width: 98%;
+    height: 65vh;
+    background-color: #e8e9eb;
+    border-left: 0.1em solid #CCD0D7;
+    box-shadow: 0 2px 12px #CCD0D7;
+}
+.destino1 p{
+    padding-top: 1.5em;
+}
+.destino1 a{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Libre Franklin', sans-serif;
+    color: #CCD0D7;
+    text-align: center;
+}
+.destino1 a:hover{
+    color: #313E64;
+    transition: all ease-out 400ms;
+}
+.destino1 a img{
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
-.destinosTexto{
-    color: rgb(255, 255, 255);
+.destino2{
+    width: 98%;
+    height: 65vh;
+    background-color: #e8e9eb;
+    border-left: 0.1em solid #CCD0D7; 
+    box-shadow: 0 2px 12px #CCD0D7;  
     position: relative;
-    top: 18%;
-    right: 3%;   
-    width: 40%;
+    top: 3em;
 }
-
-/* FLECHAS DE LOS COSTADOS IZQUIERDA | DERECHA */
-
-/* IZQUIERDA */
-
-.destinosIzquierda{
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));
-    width: 5%;
-    border-radius: 2em;
-    height: 60%;
-    position: relative;
-    right: 7%;
-    cursor: pointer;
+.destino2 p{
+    padding-top: 1.5em;
 }
-.destinosIzquierda i{
-    color: white;
-    position: relative;
-    top: 50%;
-    left: 40%;
+.destino2 a{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Libre Franklin', sans-serif;
+    color: #CCD0D7;
+    text-align: center;
 }
-
-/* DERECHA */
-
-.destinosDerecha{
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));
-    width: 5%;
-    border-radius: 2em;
-    height: 60%;
-    position: relative;
-    left: 7%;
-    cursor: pointer;
+.destino2 a:hover{
+    color: #313E64;
+    transition: all ease-out 400ms;
 }
-.destinosDerecha i{
-    color: white;
+.destino2 a img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.destino3{
+    width: 98%;
+    height: 65vh;
+    background-color: #e8e9eb;
+    border-left: 0.1em solid #CCD0D7;
+    box-shadow: 0 2px 12px #CCD0D7;
+}
+.destino3 p{
+    padding-top: 1.5em;
+}
+.destino3 a{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Libre Franklin', sans-serif;
+    color: #CCD0D7;
+    text-align: center;
+}
+.destino3 a:hover{
+    color: #313E64;
+    transition: all ease-out 400ms;
+}
+.destino3 a img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.destino4{
+    width: 98%;
+    height: 65vh;
+    background-color: #e8e9eb;
+    border-left: 0.1em solid #CCD0D7;
+    box-shadow: 0 2px 12px #CCD0D7;
     position: relative;
-    top: 50%;
-    left: 40%;
+    top: 3em;
+}
+.destino4 p{
+    padding-top: 1.5em;
+}
+.destino4 a{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Libre Franklin', sans-serif;
+    color: #CCD0D7;
+    text-align: center;
+}
+.destino4 a:hover{
+    color: #313E64;
+    transition: all ease-out 400ms;
+}
+.destino4 a img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 /* --------------------TERMINA SECTION 3 DESTINOS EN PERU --------------------*/
 
-/* --------------------EMPIEZA SECTION 4 TIPO DE VIAJES --------------------*/
+/* --------------------EMPIEZA SECTION 4 PROMOCIONES -------------------- */
 
-.tiposViajes{
-    background-color: lightblue;
+.promocion{
+    /* linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0.1)), */
+    /* background: url(https://www.peru.travel/Contenido/General/Imagen/pe/490/1.1/Huayhuash.jpg); */
+    /* background: url(https://kenziearoundtheworld.com/wp-content/uploads/2020/01/Cordillera-Huayhuash-Day-4-z2.jpg); */
+    background: url(https://ecpe2k7qe53.exactdn.com/wp-content/uploads/2019/10/D02C621B-B386-4E5C-BC00-5E48E33FFF7D-scaled.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #e8e9eb;
+    /* width: 92.4%; */
     width: 100%;
-    height: 99vh;
+    height: 65vh;
+    padding-top:4em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 30vh 1fr;
+    grid-template-columns: 0.5fr 80% 0.5fr;
+}
+.promocionTextos{
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2), rgba(0,0,0,0.3));
+    display: grid;
+    grid-column-start: 2;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    padding-bottom: 1.5em;
+    border-left: 0.2em solid #FFC750;
+}
+.promocionTextos .promocionTitulo{
+    font-size: 2.8em;
+    font-weight: bolder;
+}
+.promocionTextos .promocionParrafo{
+    font-size: 1em;
+    font-weight: bolder;
+}
+.promocionTextos a{
+    background-color: #FFC750;
+    color: #313E64;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 0.5em 2.5em;
+    border-radius: 1em;
+}
+.promocionTextos a:hover{
+    border: 0.2em solid #FFC750;
+    background-color: transparent;
+    color: #CCD0D7;
+}
+
+/* --------------------TERMINA SECTION 4 PROMOCIONES --------------------*/
+
+/* --------------------EMPIEZA SECTION 5 TIPO DE VIAJES --------------------*/
+
+.tipoViajes{
+    background-color: #e8e9eb;
+    color: #CCD0D7;
+    width: 100%;
+    height: 75vh;
+    padding-top: 2em;
+    display: grid;
+    grid-template-columns: 1.5fr 80% 1.5fr;
+    grid-template-rows: 20% 80%;
     grid-template-areas: "titulo titulo titulo"
-                         "turismo1 turismo2 turismo3";
+                         "tarjetas tarjetas tarjetas";
+    
 }
-
-.tiposViajes h2{
+.tipoViajes h2{
+    color: #313E64;
     grid-area: titulo;
-    padding: 15vh;
-    grid-column: 2;
+    grid-column-start: 2;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    border-left: 0.2em solid #FFC750; 
 }
-.tarjetaAventura{
-    grid-area: turismo1;
+.tipoViajes .tipoViajesTarjetas{
+    background-color: #e8e9eb;
+    grid-area: tarjetas;
+    grid-column-start: 2;
+    width: 80%;
+    padding-left: 4em;
+    padding-right: 4em;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-areas: "tarjeta1 tarjeta2 tarjeta3";
 }
-.tarjetaCultura{
-    grid-area: turismo2;
+.tipoViajesTarjetas .tarjetaAventura{
+    grid-area: tarjeta1;
+    text-decoration: none;
+    background-color: #313E64;
+    color: #CCD0D7;
+    width: 90%;
+    height: 40vh;
+    padding-top: 1em;
+    position: relative;
+    top: 2em;
+    border-radius: 6px;
+    box-shadow: 0 0.3px 0.5px #2c343d;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 60% 30%;
 }
-.tarjetaFiestasEventos{
-    grid-area: turismo3;
+.tipoViajesTarjetas .tarjetaAventura:hover{
+    background-color: #e8e9eb;
+    color: #313E64;
+    /* border: 0.1em solid #2c343d; */
+    transition: all ease 600ms;
+}
+.tarjetaAventura i{
+    font-size: 3em;
+}
+.tarjetaAventura p{
+    display: flex;
+    align-self: center ;
+}
+.tipoViajesTarjetas .tarjetaCultura{
+    grid-area: tarjeta2;
+    text-decoration: none;
+    background-color: #313E64;
+    color: #CCD0D7;
+    width: 90%;
+    height: 40vh;
+    padding-top: 1em;
+    position: relative;
+    top: 2em;
+    border-radius: 6px;
+    box-shadow: 0 0.3px 0.5px #2c343d;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 60% 30%;
+}
+.tipoViajesTarjetas .tarjetaCultura:hover{
+    background-color: #e8e9eb;
+    color: #313E64;
+    /* border: 0.1em solid #2c343d; */
+    transition: all ease 600ms;
+}
+.tarjetaCultura i{
+    font-size: 3em;
+}
+.tarjetaCultura p{
+    display: flex;
+    align-self: center ;
+}
+.tipoViajesTarjetas .tarjetaFiestasEventos{
+    grid-area: tarjeta3;
+    text-decoration: none;
+    background-color: #313E64;
+    color: #CCD0D7;
+    width: 90%;
+    height: 40vh;
+    padding-top: 1em;
+    position: relative;
+    top: 2em;
+    border-radius: 6px;
+    box-shadow: 0 0.3px 0.5px #2c343d;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 60% 30%;
+}
+.tipoViajesTarjetas .tarjetaFiestasEventos:hover{
+    background-color: #e8e9eb;
+    color: #313E64;
+    /* border: 0.1em solid #2c343d; */
+    transition: all ease 600ms;
+}
+.tarjetaFiestasEventos i{
+    font-size: 3em;
+}
+.tarjetaFiestasEventos p{
+    display: flex;
+    align-self: center ;
 }
 
+/* --------------------TERMINA SECTION 5 TIPO DE VIAJES --------------------*/
 
-
-
-
+/* --------------------EMPIEZA FOOTER --------------------*/
+.piePagina{
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3,32%);
+    grid-template-rows: 85% 12%;
+}
+/* ACOMODANDO LA IFORMACION DE LA CLASE CONTACTO */
+.contacto{
+    padding-top: 35%;
+    display: grid;
+    justify-self: center;
+    font-weight: bold;
+}
+.contacto p{
+    display: block;
+}
+.contacto a{
+    display: block;
+    color: #CCD0D7;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+.contacto a:hover{
+    color: #FFC750;
+    transition: all ease 500ms;
+}
+/* ACOMODANDO LA INFORMACION DE LA CLASE LOGOREDES */
+.logoRedes{
+    display: grid;
+    justify-self: center;
+    font-weight: bold;
+}
+.logoRedes p{
+    display: grid;
+    justify-items: center;
+}
+.logoRedes .redesSociales{
+    display: flex;
+    justify-self: center;
+}
+.logoRedes .redesSociales a{
+    padding-left: 1em;
+    color: #CCD0D7;
+}
+.logoRedes .redesSociales a:hover{
+    color: #FFC750;
+    transition: all ease 500ms;
+}
+/* ACOMODANDO LA INFORMACION DE LA CLASE POLITICAS */
+.politicas{
+    padding-top: 35%;
+    display: grid;
+    justify-self: center;
+    font-weight: bold;
+}
+.politicas a{
+    color: #CCD0D7;
+    text-decoration: none;
+}
+.politicas a:hover{
+    color: #FFC750;
+    transition: all ease 500ms;
+}
+/* ACOMODANDO EL CONTENIDO DE LA CLASE DERECHOSAUTOR */
+.derechosAutor{
+    grid-column-start: 2;
+    justify-self: center;
+    align-self: flex-end;
+}
 
 
 
