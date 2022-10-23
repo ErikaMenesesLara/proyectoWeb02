@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/destinosColca.css">
     <script src="https://kit.fontawesome.com/74aaf95c8b.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;800&display=swap" rel="stylesheet">
@@ -17,52 +18,53 @@
         </div>
         <nav class="cabeceraMenu">
             <ul class="menuLista">
-                <li> <a href="#">Destinos</a> </li>
-                <li> <a href="#">Estilos de viaje</a> </li>
-                <li> <a href="#">Quienes somos</a> </li>
-                <li> <a href="#">Contactenos</a> </li>
+                <li> <a href="index.html">Inicio</a> </li>
+                <li> <a href="#destinos">Destinos</a> </li>
+                <li> <a href="#estiloViaje">Estilos de viaje</a> </li>
+                <li> <a href="index.html">Quienes somos</a> </li>
+                <li> <a href="formulario.html">Contactenos</a> </li>
              </ul>
         </nav>
     </header>
 
     <section class="banner">
         <div class="bannerTexto1">
-            <h1>EXPLORA PERU</h1>
-            <p>LEGADO INCA</p>
-            <a href="#">Conocer mas</a>
+            <h1>EXPLORA PERÚ</h1>
+            <p>Conecta con la naturaleza. Práctica depórtes al aire libre. Conoce los pueblos originarios.</p>
+            <a href="#">Conocer más</a>
         </div>
     </section>
     
     <section class="textoPresentacion">
-            <p>Perú es un país de Sudamérica que abarca una sección del bosque del Amazonas y Machu Picchu, una antigua ciudad inca en las alturas de los Andes. La región en torno a Machu Picchu, incluido el Valle Sagrado, el Camino del Inca y la ciudad colonial de Cuzco, es rica en sitios arqueológicos. En la costa árida del Pacífico de Perú se encuentra Lima, la capital, con un centro colonial preservado e importantes colecciones de arte precolombino.  </p>
+            <p>Perú, el tercer país más grande de Sudamérica. Uno de los países más variados del mundo. Un país multicultural, lleno de tradiciones, una laureada gastronomía y vastas reservas naturales. Posee 12 patrimonios mundiales reconocidos por Unesco y es dueño de 84 de las 117 zonas de vida que existen en el mundo.</p>
     </section>
 
-    <section class="destinosPeru">
+    <section id="destinos" class="destinosPeru">
             <h2>ELÍGE TU DESTINO</h2>
             <div class="destinosIzquierda">
                 <button class="botonIzquierdo"><i class="fa-solid fa-chevron-left"></i></button>
             </div>
             <div class="destinosEleccion">
-                <div class="destino1">
-                    <a href="#">
+                <div id="arequipa" class="destino1">
+                    <a href="destinosColca.html">
                         <img src="https://media.istockphoto.com/photos/colca-valley-peru-picture-id515827538?k=20&m=515827538&s=612x612&w=0&h=hE3p0MzO94ZL56hNC6cRUD077fCyRmwZ6D2Wkk3RNfE=" alt="">
                         <p>Arequipa El cañon del Colca</p>
                     </a>
                 </div>
-                <div class="destino2">
-                    <a href="#">
+                <div id="cusco" class="destino2">
+                    <a href="destinosMachuPichu.html">
                         <img src="https://img2.oastatic.com/img2/34881228/900x450r/machu-picchu.jpg" alt="Cusco">
                         <p>Cusco Ciudadela Inca de Machu Pichu</p>
                     </a>
                 </div>
-                <div class="destino3">
-                    <a href="">
+                <div id="lima" class="destino3">
+                    <a href="destinosLima.html">
                         <img src="https://moyobamba.com/wp-content/uploads/2022/01/Screenshot_14-2-704x453.png" alt="Lima">
                         <p>Lima La Ciudad de los reyes</p>
                     </a>
                 </div>
-                <div class="destino4">
-                    <a href="">
+                <div id="puno" class="destino4">
+                    <a href="destinosLago.html">
                         <img src="https://img.freepik.com/fotos-premium/vista-aerea-lago-titicaca-puno-peru_261932-6142.jpg?w=2000" alt="Puno">
                         <p>Puno El Lago Titicaca</p>
                     </a>
@@ -76,26 +78,29 @@
     <section class="promocion">
         <div class="promocionTextos">
             <p class="promocionTitulo">Destacado de la semana</p>
-            <p class="promocionParrafo">Callejón de Huayhuash <br> Uno de los destinos mas espectaculares para haceer trekking <p>
-            <a href="#">Ver mas</a>
+            <p class="promocionParrafo">Callejón de Huayhuash <br> Uno de los destinos más espectaculares para hacer trekking. <p>
+            <a href="#">Ver más</a>
         </div>
     </section>
 
-    <section class="tipoViajes">
+    <section id="estiloViaje" class="tipoViajes">
         <h2>ESTILOS DE VIAJES</h2>
         <div class="tipoViajesTarjetas">
             <a href="#" class="tarjetaAventura">
                 <i class="fa-solid fa-person-hiking"></i>
                 <p>TURISMO DE AVENTURA</p>
             </a>
+            <p class="tarjetaDescripcion">Implica exploraciones o viajes con una percepción de riesgos.</p>
             <a href="#" class="tarjetaCultura">
                 <i class="fa-solid fa-mountain-city"></i>
                 <P>TURISMO CULTURAL</P>
             </a>
+            <p class="tarjetaDescripcion">Resalta los aspectos culturales que ofrece un determinado destino turístico.</p>
              <a href="#" class="tarjetaFiestasEventos">
                  <i class="fa-solid fa-people-group"></i>
                  <p>FIESTAS Y EVENTOS</p>
              </a>
+             <p class="tarjetaDescripcion">Dejate cautivar por las diferentes expreciones culturales, los pobladores te mostraran el legado de los antepasados. </p>
         </div>
     </section>
 

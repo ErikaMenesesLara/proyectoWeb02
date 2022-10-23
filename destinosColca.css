@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 99%;
+    overflow: auto;
+    font-size: 1rem;
+    font-family: 'Cairo', sans-serif;
+    font-weight: lighter;
+    background-color: #101419;
+    color: #CCD0D7;
+    scroll-behavior: smooth;
+}
+/* ---------------------------------EMPIEZA EL DESARROLLO DEL BANNER DEL DESTINO--------------------------------- */
+.bannerDestino1{
+    background: linear-gradient(rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 1)), url(https://img.itinari.com/pages/images/original/28a29989-a082-4415-9916-6bdd39383995-istock-501822898.jpg?ch=DPR&dpr=2.625&w=1600&s=ec5b27632259696a8bb6de6b69c45b82);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+}
+.textoDestino1{
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2), rgba(0,0,0,0.3));
+    width: 33%;
+    padding: 7% 7% 4%;
+    text-align: center;
+    font-weight: bold;
+}
+.bannerDestino1 a{
+    color: #313E64;
+}
+.bannerDestino1 a i{
+    font-size: 1em;
+    background-color: #FFC750;
+    border: 0.1em solid transparent;
+    border-radius: 50%;
+    padding: 0.8em;
+}
+.bannerDestino1 a i:hover{
+    background-color: transparent;
+    color: #CCD0D7;
+    border: 0.1em solid #FFC750;
+    transition: all ease 400ms;
+}
+/* ---------------------------------TERMINA EL DESARROLLO DEL BANNER DEL DESTINO--------------------------------- */
+
+/* ---------------------------------EMPIEZA DESARROLLO INFORMACION DEL CAÑON DEL COLCA--------------------------------- */
+.infoDestino1{
+    width: 100%;
+    height: 99%;
+    color: #CCD0D7;
+    padding-top: 3em;
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: ". . . ."
+                         ". video texto .";
+}
+.textoInformativo::-webkit-scrollbar{
+    width: 0.2em;
+    background-color: #CCD0D7;
+    border-radius: 5px;
+}
+.textoInformativo::-webkit-scrollbar-thumb{
+    background-color: #FFC750;
+    border-radius: 5px;
+}
+.videoDemostrativo{
+    grid-area: video;
+}
+.videoDemostrativo iframe{
+    width: 90%;
+    height: 100%;
+}
+.textoInformativo{
+    grid-area: texto;
+    width: 100%;
+    height: 100%;
+    padding-left: 2em;
+    overflow: auto;
+    border-left: solid 0.2em #FFC750;
+}
+/* ---------------------------------TERMINA DESARROLLO INFORMACION DEL CAÑON DEL COLCA--------------------------------- */
+/* ---------------------------------EMPIEZA DESARROLLO INFORMACION DE COMO LLEGAR A CAÑON DEL COLCA--------------------------------- */
+.yendoDestino{
+    width: 100%;
+    height: 90%;
+
+}

@@ -1,0 +1,97 @@
+.conocenos{
+    background-color: #e8e9eb;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+}
+/* ---------------------------------EMPIEZA EL DESARROLLO DE LA PARTE DE QUIENES SOMOS--------------------------------- */
+.banner{
+    background: linear-gradient(rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 1)), url(/Imagenes/fondoContacto1.jpg);
+    background-position: center center;
+}
+.quienesSomos {
+    width: 90%;
+    margin: 10em auto;
+    display: grid;
+    display: inline-flex;
+    color: #313E64;
+}
+.textoNosotros{
+    width: 49%;
+    margin: auto;
+    text-align: justify;
+    border-left: 0.2em solid #FFC750;
+}
+.textoNosotros .tituloNosotros{
+    padding-left: 0.4em;
+    font-size: 2em;
+}
+.textoNosotros .nosotros{
+    padding-left: 0.4em;
+    font-weight: 400;
+}
+.fotosPerfil{
+    width: 49%;
+    height: 80vh;
+    margin: 0.5em auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    text-align: center;
+    align-items: center;
+}
+.perfil{
+    display: grid;
+    grid-template-rows: 70% 15% 15%;
+}
+.fotosPerfil .perfil img{
+    width: 38%;
+    border-radius: 50%;
+}
+.fotosPerfil .perfil img:hover{
+    width: 35%;
+}
+.fotosPerfil .perfil a{
+    color: #313E64;    
+}
+.fotosPerfil .perfil a:hover{
+    opacity: 0.8;    
+    transition: all ease 500ms;
+}
+.fotosPerfil .perfil i{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+.fotosPerfil .perfil i:hover{
+    color: #FFC750;
+    transition: all ease 500ms;
+}
+/* --------------------------TERMINA EL DESARROLLO DE LA PARTE DE QUIENES SOMOS--------------------------*/
+/* --------------------------EMPIEZA EL DESARROLLO DE LA PARTE DE OBJETIVOS--------------------------*/
+.grupoObjetivo{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    color: #313E64;
+    display: grid;
+    display: inline-flex;
+}
+.imagenPrincipal{
+    width: 49%;
+}
+.imagenPrincipal img{
+    width: 90%;
+}
+.textoObjetivos{
+    width: 49%;
+}
+.imagenesSecundarias{
+    display: flex;
+    flex-direction: column;
+    padding-left: 8em;
+}
+.imagenesSecundarias img{
+    width: 85%;
+    margin: 10px;
+}

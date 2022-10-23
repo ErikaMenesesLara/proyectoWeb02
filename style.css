@@ -3,17 +3,28 @@
     padding: 0;
     box-sizing: content-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 100%;
-    height: 99vh;
+    /* height: 99vh; */
+    min-height: 100vh;
     overflow: auto;
     font-size: 1rem;
     font-family: 'Cairo', sans-serif;
     font-weight: lighter;
     background-color: #101419;
-    /* color: #EFF1ED; */
     color: #CCD0D7;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+    width: 0.3em;
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #FFC750;
+    border-radius: 5px;
 }
 
 /* --------------------EMPIZA DESARROLLO DE CABECERA LOGO Y NAVEGADORES-------------------- */
@@ -89,6 +100,7 @@ body{
 .bannerTexto1 p{
     font-family: 'Cairo', sans-serif;
     font-size: 1rem;
+    font-weight: bold;
 }
 .bannerTexto1 a{
     text-decoration: none;
@@ -128,7 +140,7 @@ body{
 
 /* --------------------EMPIEZA SECTION 3 DESTINOS EN PERU --------------------*/
 
-/* ELECCIOON DE IMAGENES QUE MUESTRAn LOS DESTINOS MAS VISITADOS DE PERU.*/
+/* ELECCIOON DE IMAGENES QUE MUESTRAN LOS DESTINOS MAS VISITADOS DE PERU.*/
 
 .destinosPeru{
     width: 100%;
@@ -376,8 +388,9 @@ body{
     background-color: #e8e9eb;
     color: #CCD0D7;
     width: 100%;
-    height: 75vh;
+    height: 99vh;
     padding-top: 2em;
+    padding-bottom: 3.5em;
     display: grid;
     grid-template-columns: 1.5fr 80% 1.5fr;
     grid-template-rows: 20% 80%;
@@ -498,6 +511,13 @@ body{
     display: flex;
     align-self: center ;
 }
+.tarjetaDescripcion{
+    width: 80%;
+    color: #313E64;
+    font-weight: bold;
+    padding-top: 2em;
+    text-align: center;
+}
 
 /* --------------------TERMINA SECTION 5 TIPO DE VIAJES --------------------*/
 
@@ -548,6 +568,7 @@ body{
 }
 .logoRedes .redesSociales a{
     padding-left: 1em;
+    padding-right: 1em;
     color: #CCD0D7;
 }
 .logoRedes .redesSociales a:hover{
