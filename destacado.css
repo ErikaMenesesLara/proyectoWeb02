@@ -3,7 +3,7 @@ body{
 }
 
 .bannerDestacado{
-    background: linear-gradient(rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 0.3), rgba(16, 20, 25, 0.8)), url(/Imagenes/Huayhuash01.jpg);
+    background: linear-gradient(rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 0.3), rgba(16, 20, 25, 0.8)), url(./Imagenes/Huayhuash01.jpg);
     background-position: top;
 }
 .textoDestacado p{
