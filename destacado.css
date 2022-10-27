@@ -1,0 +1,80 @@
+body{
+    background-color: #101419;
+}
+
+.bannerDestacado{
+    background: linear-gradient(rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 0.3), rgba(16, 20, 25, 0.8)), url(/Imagenes/Huayhuash01.jpg);
+    background-position: top;
+}
+.textoDestacado p{
+    font-size: 1.5em;
+}
+/* ------------------------------------------EMPIEZA EL DESARROLLO DE EL DESTACADO DE LA SEMANA------------------------------------------ */
+.destacadoSemana{
+    color: #CCD0D7;
+    padding: 1em;
+    font-weight: 400;
+    text-align: justify;
+    width: 97%;
+    height: auto;
+    margin: 1em auto;
+}
+.destacadoSemana p, h2{
+    padding: 1em;
+}
+.destacadoSemana h2{
+    font-size: 2em;
+    border-left: solid 0.1em #FFC750;
+}
+.destacadoTitulo{
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    padding: 2.5em 2;
+}
+.destacadoTitulo h2{
+    border: none;
+}
+.destacadoVideo1, .destacadoVideo2{
+    display: grid;
+    justify-items: center;
+    padding:3em 0;
+}
+.destacadoTexto{
+    background-color: #e8e9eb;
+    color: #313E64;
+}
+.destacadoImagenes{
+    background-color: #e8e9eb;
+    display: flex;
+    flex-direction: row;
+    padding-left: 4.5em;
+}
+.destacadoImagenes img{
+    width: 22%;
+    padding: 0 0.5em;
+    margin-bottom: 3em; 
+}
+.destacadoDatos{
+    background-color: #e8e9eb;
+    color: #313E64;
+    padding: 0 1em;
+}
+.destacadoIconos{
+    background-color: #101419;
+    display: flex;
+    justify-content: center;
+    padding: 4em 0;
+}
+.destacadoIconos a{
+    color: #CCD0D7;
+}
+.destacadoIconos a:hover{
+    color: #FFC750;
+    transition: all ease 400ms;
+}
+.destacadoIconos a i{
+    font-size: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+}

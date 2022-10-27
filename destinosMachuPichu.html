@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/destinosColca.css">
-    <link rel="stylesheet" href="/destinosMachuPichu.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./destinosColca.css">
+    <link rel="stylesheet" href="./destinosMachuPichu.css">
     <script src="https://kit.fontawesome.com/74aaf95c8b.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="destinosColca.css">
+    <link rel="shortcut icon" href="./Imagenes/logoTravel1.ico" type="image/x-icon">
+    <script defer src="./index.js"></script>
     <title>Machu Pichu</title>
 </head>
 <body>
     <header class="cabecera">
-        <div class="cabeceraLogo">
-            <img src="Imagenes/llamaLogo.png" alt="Logo">
-        </div>
         <nav class="cabeceraMenu">
-            <ul class="menuLista">
-                <li> <a href="index.html">Inicio</a> </li>
-                <li> <a href="index.html">Quienes somos</a> </li>
-                <li> <a href="formulario.html">Contactenos</a> </li>
+            <a href="./index.html" class="logo linkNavegador">intI | Travel </a>
+            <button class="botonAmburguesa">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="cabeceraLista">
+                <li class="itemNavegador"><a href="./index.html" class="menuNavegador linkNavegador">Inicio</a></li>
+                <li class="itemNavegador"><a href="./nosotros.html" class="menuNavegador linkNavegador">Quienes somos</a></li>
+                <li class="itemNavegador"><a href="./formulario.html" class="menuNavegador linkNavegador">Contactenos</a></li>
              </ul>
         </nav>
     </header>
@@ -47,14 +49,20 @@
         </div>
     </section>
     <section class="yendoDestino">
-        <div class="comoLlegar">
-            <h3>Como llegar</h3>
-            <!-- ACA IRIAN DOS BOTONES QUE ME MUESTREN LAS RUTAS QUE SE PUEDEN TOMAR PARA LLEGAR AL CAÑON DEL COLCA -->
-            <i class="fa-regular fa-circle-dot"><p>Lima - Arequipa</p></i>
-            <i class="fa-solid fa-plane-departure"><p>Vuelo: 1 hora 25 minutos</p></i>
-        </div>
-        <div class="mapaDestino">
-
+        <div class="infoDestino">
+            <div class="comoLlegar">
+                <h3>Como llegar</h3>
+                <i class="fa-regular fa-circle-dot"> - Lima - Cusco</i>
+                <i class="fa-solid fa-plane-departure"> - Vuelo: 1 h 15 min aproximadamente</i>
+                <i class="fa-regular fa-circle-dot"> - Cusco - Ollantaytambo</i>
+                <i class="fa-solid fa-bus"> - En bus o auto: 1 h 45 min aproximadamente</i>  
+                <i class="fa-regular fa-circle-dot"> - Ollantaytambo - Machu Picchu</i>
+                <i class="fa-solid fa-train-subway"> - Tren: 2 h aproximadamente</i>
+            </div>
+            <div class="mapaDestino">
+                <h3>Ubcació de Machu Pichu en el mapa.</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8231.99927298023!2d-72.54770822423662!3d-13.163268698068794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916d9a5f89555555%3A0x3a10370ea4a01a27!2sMachu%20Picchu!5e0!3m2!1ses-419!2sar!4v1666831209299!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
     <footer class="piePagina">
@@ -67,27 +75,24 @@
             </div>
         </div>
         <div class="logoRedes">
-            <div class="logotipo">
-                <img src="Imagenes/llamaLogo.ico" alt="Logo">
-            </div>
+                <img src="./Imagenes/logoTravel2.ico" alt="Logo">
             <p>Visita nuestras redes sociales</p>
             <div class="redesSociales">
-                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#0"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#0"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#0"><i class="fa-brands fa-tiktok"></i></a>
             </div>
         </div>
         <div class="politicas">
-            <a href="#">Aviso legal</a>
-            <a href="#">Política de privacidad</a>
-            <a href="#">Política de cookies</a>
-            <a href="#">Política de calidad</a>
+            <a href="#0">Aviso legal</a>
+            <a href="#0">Política de privacidad</a>
+            <a href="#0">Política de cookies</a>
+            <a href="#0">Política de calidad</a>
         </div>
     <div class="derechosAutor">
         <p>©2022 Inti|Travel. Todos los derechos reservados</p>
     </div>
-    </footer>
-
+</footer>
 </body>
 </html>

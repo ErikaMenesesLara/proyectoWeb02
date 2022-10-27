@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
@@ -44,3 +44,36 @@ body{
     border: 0.1em solid #FFC750;
     transition: all ease 400ms;
 }
+/* ---------------------------------TERMINA EL DESARROLLO DEL BANNER DEL DESTINO--------------------------------- */
+
+/* ---------------------------------EMPIEZA DESARROLLO INFORMACION DE COMO LLEGAR A CAÑON DEL COLCA--------------------------------- */
+.yendoDestino{
+    width: 100%;
+    height: 99%;
+}
+.yendoDestino .infoDestino{
+    width: 95%;
+    display: grid;
+    padding: 3em 0;
+    justify-content: center;
+    grid-template-columns: 46% 46%;
+    grid-template-areas: "comoLlegar mapa";
+}
+.comoLlegar{
+    grid-area: comoLlegar;
+}
+.comoLlegar i{
+    font-size: 0.7em;
+    padding-top: 2em;
+    display: block;
+}
+.comoLlegar h4{
+    font-size: 1em;
+}
+.mapaDestino{
+    grid-area: mapa;
+}
+.mapaDestino iframe{
+    padding-top: 2em;
+}
+/* ---------------------------------TERMINA DESARROLLO INFORMACION DE COMO LLEGAR A CAÑON DEL COLCA--------------------------------- */
