@@ -18,7 +18,7 @@ body{
 }
 
 .bannerNosotros{
-    background: linear-gradient(rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 1)), url(/Imagenes/QuienesSomosMillpuPeru.jpg);
+    background: linear-gradient(rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 1)), url(./Imagenes/QuienesSomosMillpuPeru.jpg);
     background-position: center center;
 }
 .conocenos{
