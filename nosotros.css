@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1rem;
+    font-family: 'Cairo', sans-serif;
+    font-weight: lighter;
+    background-color: #101419;
+    color: #CCD0D7;
+    scroll-behavior: smooth;
+}
+
+.bannerNosotros{
+    background: linear-gradient(rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 1)), url(/Imagenes/QuienesSomosMillpuPeru.jpg);
+    background-position: center center;
+}
+.conocenos{
+    background-color: #e8e9eb;
+    width: 100%;
+    height: auto;
+}
+/* ---------------------------------EMPIEZA EL DESARROLLO DE LA PARTE DE QUIENES SOMOS--------------------------------- */
+.quienesSomos{
+    background-color: #e8e9eb;
+    color: #313E64;
+    width: 98%;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 10em;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 49% 49%;
+    grid-template-areas: "tituloNosotros fotoPerfil";
+}
+/* DANDO ESTILOS A LOS TEXTOS DE LA PARTE DE PRESENTACION */
+.textoNosotros{
+    grid-area: tituloNosotros;
+    width: 85%;
+    text-align: justify;
+    margin: 0 auto;
+    
+}
+.tituloNosotros{
+    border-left: solid 0.2em #FFC750;
+    padding-left: 0.5em;
+    font-size: 2em;
+}
+/* UBICANDO LAS FOTOS DEL PERFIL DEL GRUPO A UN COSTADO DEL TEXTO */
+.fotosPerfil{
+    grid-area: fotoPerfil;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 43% 43%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "perfil1 perfil2"
+                         "perfil3 perfil4";
+}
+.fotosPerfil .perfil1{
+    grid-area: perfil1;
+}
+.fotosPerfil .perfil2{
+    grid-area: perfil2;
+}
+.fotosPerfil .perfil3{
+    grid-area: perfil3;
+}
+.fotosPerfil .perfil4{
+    grid-area: perfil4;
+}
+.fotosPerfil .perfil img{
+    width: 60%;
+    border-radius: 50%;
+}
+.fotosPerfil .perfil img:hover{
+    opacity: 0.8;
+}
+.fotosPerfil .perfil a{
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #313E64;
+}
+.fotosPerfil .perfil a:hover{
+    color: #FFC750;
+    transition: all ease 400ms;
+}
+/* ---------------------------------TERMINA EL DESARROLLO DE LA PARTE DE QUIENES SOMOS--------------------------------- */
+/* ---------------------------------EMPIEZA EL DESARROLLO DE LA PARTE NUESTROS OBJETIVOS--------------------------------- */
+.grupoObjetivo{
+    width: 98%;
+    height: 150vh;
+    margin: 0 auto;
+    padding-top: 8em;
+    color: #313E64;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 49% 49%;
+    grid-template-areas: "fotoPrincipal textoYFoto";
+}
+/* UBICAMOS LA FOTO PRINCIPAL QUE APARECE DEL LADO IZQUIERDO DE LA PANTALLA */
+.imagenPrincipal{
+    grid-area: fotoPrincipal;
+    display: grid;
+    justify-items: center;
+}
+.imagenPrincipal img{
+    width: 83%;
+}
+/* UBICAMOS EL TEXTO DE ESTA SECCION */
+.textoObjetivos{
+    grid-area: textoYFoto;
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-rows: 25% 35%;
+    grid-template-areas: "tituloObjetivo"
+                         "imagenes";
+}
+.tituloObjetivos, .objetivos{
+    grid-area: tituloObjetivo;
+    text-align: justify;
+}
+.tituloObjetivos{
+    font-size: 1.5em;
+    border-left: #FFC750 solid 0.2em;
+    padding-left: 0.5em;
+}
+.objetivos{
+    padding-top: 3em;
+    padding-left: 1em;
+}
+/* UBICAMOS LAS FOTOS QUE APARECEN DE BAJO DEL TEXTO DE OBJETIVOS */
+.imagenesSecundarias{
+    grid-area: imagenes;
+    display: grid;
+    justify-items: center;
+    margin-top: 2.4em;
+}
+.imagenesSecundarias img{
+    width: 60%;
+    margin: 1em;
+}
+/* ---------------------------------TERMINA EL DESARROLLO DE LA PARTE NUESTROS OBJETIVOS--------------------------------- */
+
+
+
+
+/* ------------------------------------------MEDIA QUERIES 1200px---------------------------------------- */
+
+@media only screen and (max-width: 1200px){
+
+    .quienesSomos{
+        padding-top: 5em;
+    }
+    /*TEXTOS DE LA PARTE DE PRESENTACION */
+    .textoNosotros{
+        width: 83%;
+    }
+    .tituloNosotros{
+        font-size: 1.8em;
+    }
+    /* UBICANDO LAS FOTOS DEL PERFIL DEL GRUPO A UN COSTADO DEL TEXTO */
+    .fotosPerfil{
+        grid-template-columns: 42% 42%;
+        grid-template-rows: 48% 48%;
+    }
+    .fotosPerfil .perfil img{
+        width: 57%;
+    }
+
+    /* ---------------------------------EMPIEZA EL DESARROLLO DE LA PARTE NUESTROS OBJETIVOS--------------------------------- */
+    .grupoObjetivo{
+        padding-top: 5em;
+        grid-template-columns: 48% 48%;
+    }
+    /* UBICAMOS LA FOTO PRINCIPAL QUE APARECE DEL LADO IZQUIERDO DE LA PANTALLA */
+    .imagenPrincipal img{
+        width: 80%;
+    }
+    /* UBICAMOS EL TEXTO DE ESTA SECCION */
+    .textoObjetivos{
+        grid-template-rows: 28% 38%;
+    }
+    .objetivos{
+        padding-top: 2em;
+        padding-left: 1em;
+        font-size: 1em;
+    }
+    /* UBICAMOS LAS FOTOS QUE APARECEN DE BAJO DEL TEXTO DE OBJETIVOS */
+    .imagenesSecundarias{
+        grid-area: imagenes;
+        display: grid;
+        justify-items: center;
+        margin-top: 3em;
+    }
+    .imagenesSecundarias img{
+        width: 50%;
+        margin: 1em;
+    }
+
+    /* --------------------SECCION FOOTER --------------------*/
+    .piePagina{
+        width: 100%;
+        height: 70vh;
+        padding: 0 0;
+        margin: 0;
+        display: grid;
+        align-items: center;
+        justify-content: space-evenly;
+        grid-template-columns:18% 40% 18%;
+        grid-template-rows: 85% 12%;
+    }
+/* ACOMODANDO LA IFORMACION DE LA CLASE CONTACTO */
+    .contacto{
+        padding-top: 0;
+    }
+    .contactosLink{
+        font-size: 1em;
+    }
+    .contacto p{
+        font-size: 1em;
+    }
+/* ACOMODANDO LA INFORMACION DE LA CLASE LOGOREDES */
+    .logoRedes{
+        height: 35vh;
+    }
+    .logoRedes img{
+        font-size: 1em; 
+    }
+/* ACOMODANDO LA INFORMACION DE LA CLASE POLITICAS */
+    .politicas{
+        padding-top: 0; 
+    }
+    .politicas a{   
+        font-size: 1em;
+    }
+}
+/* ------------------------------------------MEDIA QUERIES 992px---------------------------------------- */
+
+@media only screen and (max-width: 992px){
+
+    /* ---------------------------------EMPIEZA EL DESARROLLO DE LA PARTE DE QUIENES SOMOS--------------------------------- */
+    .quienesSomos{
+        padding-top: 3em;
+    }
+/* DANDO ESTILOS A LOS TEXTOS DE LA PARTE DE PRESENTACION */
+    .textoNosotros{
+        width: 88%;
+    }
+    .tituloNosotros{
+        font-size: 1.5em;
+    }
+/* UBICANDO LAS FOTOS DEL PERFIL DEL GRUPO A UN COSTADO DEL TEXTO */
+    .fotosPerfil{
+        padding-top: 3em;
+        padding-left: 3em;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: 47% 47%;
+    }
+
+/* ---------------------------------SECCION DE NUESTROS OBJETIVOS--------------------------------- */
+    .grupoObjetivo{
+        padding-top: 5em;
+        grid-template-columns: 48% 48%;
+    }
+/* UBICAMOS LA FOTO PRINCIPAL QUE APARECE DEL LADO IZQUIERDO DE LA PANTALLA */
+    .imagenPrincipal img{
+        width: 90%;
+        margin-top: 3.5em;
+    }
+/* UBICAMOS EL TEXTO DE ESTA SECCION */
+    .textoObjetivos{
+        grid-template-rows: 42% 45%;
+    }
+    .objetivos{
+        padding-top: 2em;
+        padding-left: 1em;
+        font-size: 1em;
+    }
+    .imagenesSecundarias{
+        margin-top: 1em;
+    }
+    .imagenesSecundarias img{
+        width: 55%;
+        margin: 0.3em;
+    }
+
+    /* --------------------SECCION FOOTER --------------------*/
+    .piePagina{
+        height: 60vh;
+        padding-bottom: 5.6em;
+        grid-template-rows: 100% 40%;
+        grid-template-columns: 25% 45% 25%;
+    }
+/* ACOMODANDO LA IFORMACION DE LA CLASE CONTACTO */
+    .contacto p{
+        font-size: 1em;
+    }
+    .contactosLink{
+        font-size: 1em;
+    }
+/* ACOMODANDO LA INFORMACION DE LA CLASE LOGOREDES */
+    .logoRedes{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        text-align: center;
+        height: 28vh;
+    }
+    .logoRedes p{
+        padding-top: 1;   
+    }
+    .logoRedes img{
+        font-size: 0.8em;
+        justify-self: center;
+    }
+    .redesSociales{
+        padding: 0 3em;
+    }
+/* ACOMODANDO LA INFORMACION DE LA CLASE POLITICAS */
+    .politicas a{   
+        font-size: 1em;
+    }
+    .derechosAutor{
+        font-size: 0.2;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        padding: 0 0;
+    }
+}
+
+/* ------------------------------------------MEDIA QUERIES 768px---------------------------------------- */
+
+@media only screen and (max-width: 768px){
+
+    /* ---------------------------------EMPIEZA EL DESARROLLO DE LA PARTE DE QUIENES SOMOS--------------------------------- */
+    .quienesSomos{
+        background-color: #e8e9eb;
+        color: #313E64;
+        width: 98%;
+        height: 100vh;
+        margin: 0 auto;
+        padding-top: 2em;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: none;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "tituloNosotros"
+                             "fotoPerfil";
+    }
+/* DANDO ESTILOS A LOS TEXTOS DE LA PARTE DE PRESENTACION */
+    .textoNosotros{
+        grid-area: tituloNosotros;
+        width: 85%;
+        text-align: justify;
+        margin: 0 0.5em;
+    }
+    .textoNosotros .nosotros{
+        font-size: 0.8em;
+    }
+    .tituloNosotros{
+    border-left: solid 0.1em #FFC750;
+    padding-left: 0.5em;
+    font-size: 1.2em;
+    }
+/* UBICANDO LAS FOTOS DEL PERFIL DEL GRUPO ABAJO DEL TEXTO */
+    .fotosPerfil{
+        grid-area: fotoPerfil;
+        width: 100%;
+        display: grid;
+        text-align: center;
+        grid-template-columns: 24% 24% 24% 24%;
+        grid-template-rows: none;
+        grid-template-areas: "perfil1 perfil2 perfil3 perfil4";
+    }
+/* ---------------------------------NUESTROS OBJETIVOS--------------------------------- */
+    .grupoObjetivo{
+        width: 98%;
+        height: 150vh;
+        margin: 0 auto;
+        padding-top: 2em;
+        color: #313E64;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: none;
+        grid-template-areas: none;
+    }
+/* UBICAMOS LA FOTO PRINCIPAL QUE APARECE DEL LADO IZQUIERDO DE LA PANTALLA */
+    .imagenPrincipal{
+        display: none;
+    }
+/* UBICAMOS EL TEXTO DE ESTA SECCION */
+    .textoObjetivos{
+        grid-template-rows: 25% 63%;
+        grid-template-areas: "tituloObjetivo"
+                             "imagenes";
+    }
+    .tituloObjetivos{
+        font-size: 1.2em;
+    }
+    .objetivos{
+        padding-top: 2em;
+        padding-left: 1em;
+    }
+/* UBICAMOS LAS FOTOS QUE APARECEN DE BAJO DEL TEXTO DE OBJETIVOS */
+    .imagenesSecundarias{
+        grid-area: imagenes;
+        display: grid;
+        justify-items: center;
+        margin-top: 1em;
+    }
+    .imagenesSecundarias img{
+        width: 50%;
+        margin: 1em;
+    }
+
+/* --------------------SECCION FOOTER --------------------*/
+    .piePagina{
+        height: 70vh;
+        padding-bottom: 5em;
+        grid-template-rows: 100% 40%;
+        grid-template-columns: 25% 40% 25%;
+    }
+/* ACOMODANDO LA IFORMACION DE LA CLASE CONTACTO */
+    .contacto p{
+        font-size: 0.8em;
+    }
+     .contactosLink{
+        font-size: 0.8em;
+    }
+/* ACOMODANDO LA INFORMACION DE LA CLASE LOGOREDES */
+    .logoRedes{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        text-align: center;
+        height: 30vh;
+    }
+    .logoRedes img{
+        font-size: 0.7em;
+        justify-self: center;
+    }
+    .logoRedes p{
+         margin-top: 2em;
+    }
+/* ACOMODANDO LA INFORMACION DE LA CLASE POLITICAS */
+    .politicas a{   
+        font-size: 0.8em; 
+    }   
+    .derechosAutor{
+        font-size: 0.8em;
+        padding: 1em 0;
+        margin-bottom: 5em;
+        text-align: center
+    }
+
+}

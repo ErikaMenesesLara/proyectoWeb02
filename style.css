@@ -1,74 +1,87 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 100%;
     height: 99vh;
-    overflow: auto;
     font-size: 1rem;
     font-family: 'Cairo', sans-serif;
     font-weight: lighter;
     background-color: #101419;
-    /* color: #EFF1ED; */
     color: #CCD0D7;
+    scroll-behavior: smooth;
 }
-
 /* --------------------EMPIZA DESARROLLO DE CABECERA LOGO Y NAVEGADORES-------------------- */
-
 .cabecera{
-    background:linear-gradient(rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.1));
-    /* background: transparent; */
+    background: linear-gradient(rgba(16, 20, 25, 0.5), rgba(16, 20, 25, 0.3), rgba(16, 20, 25, 0.1));
     width: 100%;
-    height: 4rem;
-    padding-top: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: 15vh;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 1;
-    
 }
-.cabeceraLogo{
-    padding-left: 3em;
-}
- .cabeceraLogo img{
-    width: 14vh;
-    height: 13vh;
-    border-radius: 50%;
- }
-.cabeceraMenu .menuLista{
-    list-style: none;
+.cabeceraMenu{
+    width: 100%;
     display: flex;
-    align-items: center;
-    gap: 2em;
-    padding-right: 3em;
+    justify-content: space-evenly;
+    margin: auto;
 }
-.cabeceraMenu .menuLista a{
+.linkNavegador{
+    color: #CCD0D7;
     text-decoration: none;
-    border-bottom: 0.3em solid transparent;
-    font-weight: bold;
-    color: #EFF1ED;
-    padding: 0.5em;
+}
+.logo{
+    font-size: 2em;
+    font-weight: bolder;
+    padding: 0 40px;
+    /* padding: 0 2em; */
+    line-height: 15vh;
+}
+.cabeceraLista{
+    display: flex;
+    margin-right: 40px;
+    /* padding: 0 2em; */
+    list-style: none;
+}
+.itemNavegador{
+    font-size: 1.2em;
+    margin: 0 10px;
+    line-height: 15vh;
     text-transform: uppercase;
+    width: max-content;
+    border-bottom: solid 0.1em transparent;
 }
-.cabeceraMenu .menuLista a:hover{
-    /* background: linear-gradient(rgba(16, 20, 25, 0.1), rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.3)); */
-    border-bottom: 0.1em solid #FFC750;
-    border-radius: 5px;
+.menuNavegador{
+    padding: 8px 12px;
+    font-weight: 400;
 }
+.menuNavegador:hover{
+    border-bottom: solid 0.1em #FFC750;
+    transition: all ease 400ms;
+}
+.botonAmburguesa{
+    color: #CCD0D7;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    padding: 0 1em;
+    line-height: 15vh;
 
-
+    display: none;
+}
 /* --------------------TERMINA DESARROLLO DE CABECERA LOGO Y NAVEGADORES-------------------- */
 
 /* --------------------EMPIEZA SECTION 1 BANNER --------------------*/
 
 .banner{
     background: linear-gradient(rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 1)), url(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/CG2ZTCRLSZHE7HICLCSIHUWTWA.jpg);
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     width: 100%;
     height: 99vh;
@@ -89,6 +102,7 @@ body{
 .bannerTexto1 p{
     font-family: 'Cairo', sans-serif;
     font-size: 1rem;
+    font-weight: bold;
 }
 .bannerTexto1 a{
     text-decoration: none;
@@ -112,8 +126,6 @@ body{
 
 .textoPresentacion{
     background: linear-gradient(rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.1));
-    /* background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5), rgba(0,0,0,0.1)); */
-    /* color: white; */
     width: 100%;
     height: 30vh;
     text-align: center;
@@ -128,7 +140,7 @@ body{
 
 /* --------------------EMPIEZA SECTION 3 DESTINOS EN PERU --------------------*/
 
-/* ELECCIOON DE IMAGENES QUE MUESTRAn LOS DESTINOS MAS VISITADOS DE PERU.*/
+/* ELECCIOON DE IMAGENES QUE MUESTRAN LOS DESTINOS MAS VISITADOS DE PERU.*/
 
 .destinosPeru{
     width: 100%;
@@ -136,9 +148,8 @@ body{
     padding-top: 2em;
     background-color: #e8e9eb;
     display: grid;
-    /* gap: 0.1em; */
     justify-content: center;
-    grid-template-rows:20% 80%;
+    grid-template-rows:15% 80%;
     grid-template-columns: 0.5fr 80% 0.5fr;
     grid-template-areas: "titulo titulo titulo"
                          "izquierda destinos derecha";
@@ -200,118 +211,65 @@ body{
 .destinosEleccion{
     grid-area: destinos;
     width: 90%;
-    padding-left: 4em;
+    height: 50vh;
+    padding-left: 7em;
     padding-right: 1em;
     display: grid;
     grid-template-columns: repeat(4, 25%);
 }
-.destino1{
-    width: 98%;
-    height: 65vh;
-    background-color: #e8e9eb;
-    border-left: 0.1em solid #CCD0D7;
-    box-shadow: 0 2px 12px #CCD0D7;
+.destinosEleccion .destino{
+    background-color: white;
 }
-.destino1 p{
-    padding-top: 1.5em;
+.destinosEleccion .destino p{
+    padding-top: 0.5em;
 }
-.destino1 a{
+.destinosEleccion .destino a{
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: 'Libre Franklin', sans-serif;
     color: #CCD0D7;
     text-align: center;
 }
-.destino1 a:hover{
+.destinosEleccion .destino a:hover{
     color: #313E64;
     transition: all ease-out 400ms;
 }
-.destino1 a img{
+.destinosEleccion .destino a img{
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+.destino1{
+    width: 98%;
+    height: 95%;
+    background-color: #e8e9eb;
+    border-left: 0.1em solid #CCD0D7;
+    box-shadow: 0 2px 12px #CCD0D7;
+}
 .destino2{
     width: 98%;
-    height: 65vh;
+    height: 95%;
     background-color: #e8e9eb;
     border-left: 0.1em solid #CCD0D7; 
     box-shadow: 0 2px 12px #CCD0D7;  
     position: relative;
     top: 3em;
 }
-.destino2 p{
-    padding-top: 1.5em;
-}
-.destino2 a{
-    text-decoration: none;
-    font-size: 1.5em;
-    font-family: 'Libre Franklin', sans-serif;
-    color: #CCD0D7;
-    text-align: center;
-}
-.destino2 a:hover{
-    color: #313E64;
-    transition: all ease-out 400ms;
-}
-.destino2 a img{
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
 .destino3{
     width: 98%;
-    height: 65vh;
+    height: 95%;
     background-color: #e8e9eb;
     border-left: 0.1em solid #CCD0D7;
     box-shadow: 0 2px 12px #CCD0D7;
 }
-.destino3 p{
-    padding-top: 1.5em;
-}
-.destino3 a{
-    text-decoration: none;
-    font-size: 1.5em;
-    font-family: 'Libre Franklin', sans-serif;
-    color: #CCD0D7;
-    text-align: center;
-}
-.destino3 a:hover{
-    color: #313E64;
-    transition: all ease-out 400ms;
-}
-.destino3 a img{
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
 .destino4{
     width: 98%;
-    height: 65vh;
+    height: 95%;
     background-color: #e8e9eb;
     border-left: 0.1em solid #CCD0D7;
     box-shadow: 0 2px 12px #CCD0D7;
     position: relative;
     top: 3em;
-}
-.destino4 p{
-    padding-top: 1.5em;
-}
-.destino4 a{
-    text-decoration: none;
-    font-size: 1.5em;
-    font-family: 'Libre Franklin', sans-serif;
-    color: #CCD0D7;
-    text-align: center;
-}
-.destino4 a:hover{
-    color: #313E64;
-    transition: all ease-out 400ms;
-}
-.destino4 a img{
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
 }
 
 /* --------------------TERMINA SECTION 3 DESTINOS EN PERU --------------------*/
@@ -376,14 +334,14 @@ body{
     background-color: #e8e9eb;
     color: #CCD0D7;
     width: 100%;
-    height: 75vh;
+    height: 99vh;
     padding-top: 2em;
+    padding-bottom: 3.5em;
     display: grid;
     grid-template-columns: 1.5fr 80% 1.5fr;
     grid-template-rows: 20% 80%;
     grid-template-areas: "titulo titulo titulo"
-                         "tarjetas tarjetas tarjetas";
-    
+                         "tarjetas tarjetas tarjetas";  
 }
 .tipoViajes h2{
     color: #313E64;
@@ -397,12 +355,12 @@ body{
     background-color: #e8e9eb;
     grid-area: tarjetas;
     grid-column-start: 2;
-    width: 80%;
+    width: 90%;
     padding-left: 4em;
     padding-right: 4em;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 30%);
     grid-template-areas: "tarjeta1 tarjeta2 tarjeta3";
 }
 .tipoViajesTarjetas .tarjetaAventura{
@@ -410,7 +368,7 @@ body{
     text-decoration: none;
     background-color: #313E64;
     color: #CCD0D7;
-    width: 90%;
+    width: 80%;
     height: 40vh;
     padding-top: 1em;
     position: relative;
@@ -441,7 +399,7 @@ body{
     text-decoration: none;
     background-color: #313E64;
     color: #CCD0D7;
-    width: 90%;
+    width: 80%;
     height: 40vh;
     padding-top: 1em;
     position: relative;
@@ -472,7 +430,7 @@ body{
     text-decoration: none;
     background-color: #313E64;
     color: #CCD0D7;
-    width: 90%;
+    width: 80%;
     height: 40vh;
     padding-top: 1em;
     position: relative;
@@ -498,6 +456,13 @@ body{
     display: flex;
     align-self: center ;
 }
+.tarjetaDescripcion{
+    width: 80%;
+    color: #313E64;
+    font-weight: bold;
+    padding-top: 2em;
+    text-align: center;
+}
 
 /* --------------------TERMINA SECTION 5 TIPO DE VIAJES --------------------*/
 
@@ -505,15 +470,17 @@ body{
 .piePagina{
     width: 100%;
     height: 60vh;
+    padding: 1em 0;
     display: grid;
     align-items: center;
     justify-content: space-evenly;
-    grid-template-columns: repeat(3,32%);
+    /* grid-template-columns: repeat(3,32%); */
+    grid-template-columns: 20% 40% 20%;
     grid-template-rows: 85% 12%;
 }
 /* ACOMODANDO LA IFORMACION DE LA CLASE CONTACTO */
 .contacto{
-    padding-top: 35%;
+    padding-top: 30%;
     display: grid;
     justify-self: center;
     font-weight: bold;
@@ -538,6 +505,9 @@ body{
     justify-self: center;
     font-weight: bold;
 }
+.logoRedes img{
+    width: 12.5em;
+}
 .logoRedes p{
     display: grid;
     justify-items: center;
@@ -547,7 +517,8 @@ body{
     justify-self: center;
 }
 .logoRedes .redesSociales a{
-    padding-left: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5m;
     color: #CCD0D7;
 }
 .logoRedes .redesSociales a:hover{
@@ -575,6 +546,593 @@ body{
     justify-self: center;
     align-self: flex-end;
 }
+
+/* ------------------------------------------MEDIA QUERIES 1200px---------------------------------------- */
+
+@media only screen and (max-width: 1200px){
+
+/* ---------------------------------------CABECERA LOGO Y NAVEGADORES------------------------------------ */
+.cabecera{
+    background: linear-gradient(rgba(16, 20, 25, 0.5), rgba(16, 20, 25, 0.3), rgba(16, 20, 25, 0.1));
+    height: 12vh;
+}
+.cabeceraMenu{
+    margin: auto;
+}
+.logo{
+    line-height: 12vh;
+}
+.itemNavegador{
+    line-height: 12vh;
+}
+.menuNavegador:hover{
+    color: #FFC750;
+    transition: all ease 400ms;
+}
+
+/* ---------------------SECTION 1 BANNER --------------------*/
+
+/* --------------------SECTION 2 TEXTO DE PRESENTACION DE PERU --------------------*/
+
+/* --------------------SECTION 3 DESTINOS EN PERU --------------------*/
+
+/* ELECCIOON DE IMAGENES QUE MUESTRAN LOS DESTINOS MAS VISITADOS DE PERU.*/
+
+.destinosPeru{
+    height: 90vh;
+    padding-top: 2em;
+    grid-template-rows:15% 70%;
+}
+.destinosEleccion .destino{
+    height: 60vh;
+}
+.destinosPeru h2{
+    font-size: 1.5em;     
+    border-left: 0.1em solid #FFC750; 
+}
+/* FLECHA IZQUIERDA */
+ .destinosIzquierda .botonIzquierdo{
+    font-size: 1em;
+ } 
+/*FLECHA DERECHA */
+.destinosDerecha .botonDerecho{
+    font-size: 1em;
+}
+/* UBICACION DE LOS DESTINOS A ELEGGIR */
+/* DESTINOS ELECCION SERIA EL CONTENEDOR PADRE DE LAS 4 TARJETAS */
+.destinosEleccion{
+    height: 50%;
+    padding-left: 6em;
+    padding-right: 1em;
+    gap: 0.5em;
+    grid-template-rows: 50%;
+}
+.destinosEleccion .destino a{
+    font-size: 1.2em;
+    color: #313E64;
+}
+.destino2{
+    top: 0;
+}
+.destino4{
+    top: 0;
+}
+
+/* --------------------SECTION 4 PROMOCIONES -------------------- */
+.promocion{
+    height: 85vh;
+    padding-top:3.5em;
+}
+.promocionTextos .promocionTitulo{
+    font-size: 3em;
+}
+.promocionTextos .promocionParrafo{
+    font-size: 1.3em;
+}
+.promocionTextos a{
+    font-size: 1em;
+}
+
+/* --------------------EMPIEZA SECTION 5 TIPO DE VIAJES --------------------*/
+.tipoViajesTarjetas{
+    margin-left: 2em;
+}
+.tipoViajes h2{
+    font-size: 1.5em;
+    padding-bottom: 0.1em;
+    border-left: 0.1em solid #FFC750; 
+    display: flex;
+    align-items: flex-end;
+}
+.tipoViajesTarjetas .tarjetaAventura{
+    width: 75%;
+    height: 35vh;
+    grid-template-rows: 60% 30%;
+}
+.tarjetaAventura i{
+    font-size: 3.5em;
+}
+.tarjetaAventura p{
+    text-align: center;
+    font-size: 0.8em;
+}
+.tipoViajesTarjetas .tarjetaCultura{
+    width: 75%;
+    height: 35vh;
+    grid-template-rows: 60% 30%;
+}
+.tarjetaCultura i{
+    font-size: 3.5em;
+}
+.tarjetaCultura p{
+    text-align: center;
+    font-size: 0.8em;
+}
+.tipoViajesTarjetas .tarjetaFiestasEventos{
+    width: 75%;
+    height: 35vh;
+    grid-template-rows: 60% 30%;
+}
+.tarjetaFiestasEventos i{
+    font-size: 3.5em;
+}
+.tarjetaFiestasEventos p{
+    text-align: center;
+    font-size: 0.8em;
+}
+.tarjetaDescripcion{
+    padding-top: 2.5em;
+}
+
+/* --------------------SECCION FOOTER --------------------*/
+.piePagina{
+    width: 100%;
+    height: 70vh;
+    padding: 0 0;
+    margin: 0;
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns:18% 40% 18%;
+    grid-template-rows: 85% 12%;
+}
+/* ACOMODANDO LA IFORMACION DE LA CLASE CONTACTO */
+.contacto{
+    padding-top: 0;
+}
+.contactosLink{
+    font-size: 1em;
+}
+.contacto p{
+    font-size: 1em;
+}
+/* ACOMODANDO LA INFORMACION DE LA CLASE LOGOREDES */
+.logoRedes{
+    height: 35vh;
+}
+.logoRedes img{
+    font-size: 1em;
+}
+/* ACOMODANDO LA INFORMACION DE LA CLASE POLITICAS */
+.politicas{
+    padding-top: 0;
+}
+.politicas a{   
+    font-size: 1em;
+}
+}
+
+/* ------------------------------------------MEDIA QUERIES 992px---------------------------------------- */
+
+@media only screen and (max-width: 992px){
+
+/* ---------------------------------------CABECERA LOGO Y NAVEGADORES------------------------------------ */
+.cabecera{
+    background-color: #101419;
+    opacity: 0.9;
+    height: 10vh;
+}
+.logo{
+    font-size: 1.5em;
+    line-height: 10vh;
+}
+.itemNavegador{
+    font-size: 1em;
+    line-height: 10vh;
+}
+.menuNavegador:hover{
+    color: #FFC750;
+    transition: all ease 400ms;
+}
+.cabeceraLista{
+    flex-direction: column;
+    margin: 0;
+    background-color: #101419;
+    opacity: 0.9;
+    position: fixed;
+    left: 0;
+    top: 10vh;
+    width: 100%;
+    align-items: center;
+    padding: 1.5em 0;
+
+
+    left: 100%;
+    transition: left 0.5s;
+}
+.botonAmburguesa{
+    line-height: 10vh;
+    display: block;
+}
+.cabeceraLista_Visible{
+    left: 0;
+}
+
+/* ---------------------SECTION 1 BANNER --------------------*/
+
+.bannerTexto1{
+    top: 40%;
+}
+.bannerTexto1 h1{
+    font-size: 2.8rem;
+}
+.bannerTexto1 p{
+    font-size: 1rem;
+}
+/* .bannerTexto1 a{
+    padding: 0.3em 1.5em;
+    margin-top: 1.2em;
+    font-size: 1.2em;
+} */
+
+/* --------------------SECTION 2 TEXTO DE PRESENTACION DE PERU --------------------*/
+.textoPresentacion p{
+    font-size: 1em;
+}
+
+/* --------------------SECTION 3 DESTINOS EN PERU --------------------*/
+
+/* ELECCIOON DE IMAGENES QUE MUESTRAN LOS DESTINOS MAS VISITADOS DE PERU.*/
+
+.destinosPeru{
+    height: 85vh;
+    padding-top: 3em;
+    grid-template-rows:15% 70%;
+}
+.destinosEleccion .destino{
+    height: 50vh;
+}
+.destinosPeru h2{
+    padding-top: 0.8em;
+    font-size: 1.3em;     
+}
+/* FLECHA IZQUIERDA */
+ .destinosIzquierda .botonIzquierdo{
+    font-size: 1.2em;
+ } 
+/*FLECHA DERECHA */
+.destinosDerecha .botonDerecho{
+    font-size: 1.2em;
+}
+/* UBICACION DE LOS DESTINOS A ELEGGIR */
+/* DESTINOS ELECCION SERIA EL CONTENEDOR PADRE DE LAS 4 TARJETAS */
+.destinosEleccion .destino a{
+    font-size: 1em;
+}
+
+/* --------------------SECTION 4 PROMOCIONES -------------------- */
+.promocion{
+    padding-top: 5.5em;
+}
+.promocionTextos .promocionTitulo{
+    font-size: 2.8em;
+}
+.promocionTextos .promocionParrafo{
+    font-size: 1.2em;
+}
+.promocionTextos a{
+    font-size: 1.2em;
+    padding: 0.3em 2em;
+}
+
+/* --------------------EMPIEZA SECTION 5 TIPO DE VIAJES --------------------*/
+.tipoViajesTarjetas{
+    margin-left: 2em;
+    padding-top: 0;
+}
+.tipoViajes h2{
+    font-size: 1.3em;
+}
+.tarjetaAventura i{
+    font-size: 3.3em;
+}
+.tarjetaAventura p{
+    text-align: center;
+    font-size: 0.8em;
+}
+.tarjetaCultura i{
+    font-size: 3.3em;
+}
+.tarjetaCultura p{
+    text-align: center;
+    font-size: 0.8em;
+}
+.tarjetaFiestasEventos i{
+    font-size: 3.3em;
+}
+.tarjetaFiestasEventos p{
+    text-align: center;
+    font-size: 0.8em;
+}
+.tarjetaDescripcion{
+    display: none;
+}
+
+/* --------------------SECCION FOOTER --------------------*/
+.piePagina{
+    height: 60vh;
+    padding-bottom: 5.6em;
+    grid-template-rows: 100% 40%;
+    grid-template-columns: 25% 45% 25%;
+}
+/* ACOMODANDO LA IFORMACION DE LA CLASE CONTACTO */
+.contacto p{
+    font-size: 1em;
+}
+.contactosLink{
+    font-size: 1em;
+}
+/* ACOMODANDO LA INFORMACION DE LA CLASE LOGOREDES */
+.logoRedes{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: center;
+    height: 28vh;
+}
+.logoRedes p{
+    padding-top: 1;   
+}
+.logoRedes img{
+    font-size: 0.8em;
+    justify-self: center;
+}
+.redesSociales{
+    padding: 0 3em;
+}
+/* ACOMODANDO LA INFORMACION DE LA CLASE POLITICAS */
+.politicas a{   
+    font-size: 1em;
+}
+.derechosAutor{
+    font-size: 0.2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    padding: 0 0;
+}
+}
+
+/* ------------------------------------------MEDIA QUERIES 768px---------------------------------------- */
+
+@media only screen and (max-width: 768px){
+
+    /* ---------------------------------------CABECERA LOGO Y NAVEGADORES------------------------------------ */
+    .cabecera{
+        background-color: #101419;
+        opacity: 0.9;
+        height: 8vh;
+    }
+    .logo{
+        font-size: 1.3em;
+        line-height: 8vh;
+    }
+    .itemNavegador{
+        font-size: 1em;
+        line-height: 8vh;
+    }
+    .cabeceraLista{
+        top: 8vh;
+    }
+    .botonAmburguesa{
+        line-height: 8vh;
+        font-size: 1.2em;
+    }
+    
+    /* ---------------------SECTION 1 BANNER --------------------*/
+
+    .bannerTexto1{
+        top: 42%;
+    }
+    .bannerTexto1 h1{
+         font-size: 2.5rem;
+    }
+    .bannerTexto1 p{
+         font-size: 0.8rem;
+    }
+    .bannerTexto1 a{
+        padding: 0.2em 1.4em;
+        margin-top: 1.1em;
+        font-size: 1.1em;
+    }
+
+    /* --------------------SECTION 2 TEXTO DE PRESENTACION DE PERU --------------------*/
+    .textoPresentacion p{
+        font-size: 0.8em; 
+    }
+
+    /* --------------------SECTION 3 DESTINOS EN PERU --------------------*/
+
+    /* ELECCIOON DE IMAGENES QUE MUESTRAN LOS DESTINOS MAS VISITADOS DE PERU.*/
+
+    .destinosPeru{
+        height: 80vh;
+        padding-top: 5em;
+        grid-template-rows:15% 70%;
+    }
+    .destinosEleccion .destino{
+        height: 40vh;   
+    }
+    .destinosPeru h2{
+        padding-top: 0.6em;
+        font-size: 1.1em;     
+    }
+    /* FLECHA IZQUIERDA */
+    .destinosIzquierda .botonIzquierdo{
+        font-size: 1em;
+    } 
+    /*FLECHA DERECHA */
+    .destinosDerecha .botonDerecho{
+        font-size: 1em;
+    }
+    /* UBICACION DE LOS DESTINOS A ELEGGIR */
+    /* DESTINOS ELECCION SERIA EL CONTENEDOR PADRE DE LAS 4 TARJETAS */
+    .destinosEleccion .destino a{
+        font-size: 0.8em;
+    }
+
+    /* --------------------SECTION 4 PROMOCIONES -------------------- */
+    .promocion{
+        padding-top: 5.5em;
+    }
+    .promocionTextos .promocionTitulo{
+        font-size: 2.6em;
+    }
+    .promocionTextos .promocionParrafo{
+        font-size: 1em;
+    }
+    .promocionTextos a{
+        font-size: 1em;
+    }
+
+
+    /* --------------------SECTION 5 TIPO DE VIAJES --------------------*/
+    .tipoViajes{
+        height: 85vh;
+        padding-top: 1em;
+    }
+    .tipoViajesTarjetas{
+        margin-left: 0em;
+        padding-top: 0;
+        gap: 0.5em;
+    }
+    .tipoViajes h2{
+        font-size: 1.3em;
+    }
+    .tipoViajes .tarjetaAventura{
+        width: 95%;
+        height: 60%;
+    }
+    .tarjetaAventura i{
+        font-size: 3.3em;
+    }
+    .tarjetaAventura p{
+        text-align: center;
+        font-size: 0.8em;
+    }
+    .tipoViajes .tarjetaCultura{
+        width: 95%;
+        height: 60%;
+    }
+    .tarjetaCultura i{
+        font-size: 3.3em;
+    }
+    .tarjetaCultura p{
+        text-align: center;
+        font-size: 0.8em;
+    }
+    .tipoViajes .tarjetaFiestasEventos{
+        width: 95%;
+        height: 60%;
+    }
+    .tarjetaFiestasEventos i{
+        font-size: 3.3em;
+    }
+    .tarjetaFiestasEventos p{
+        text-align: center;
+        font-size: 0.8em;
+    }
+    .tarjetaDescripcion{
+        display: none;
+    }
+
+    /* --------------------SECCION FOOTER --------------------*/
+    .piePagina{
+        height: 70vh;
+        padding-bottom: 5em;
+        grid-template-rows: 100% 40%;
+        grid-template-columns: 25% 40% 25%;
+    }
+    /* ACOMODANDO LA IFORMACION DE LA CLASE CONTACTO */
+    .contacto p{
+        font-size: 0.8em;
+    }
+    .contactosLink{
+        font-size: 0.8em;
+    }
+    /* ACOMODANDO LA INFORMACION DE LA CLASE LOGOREDES */
+    .logoRedes{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        text-align: center;
+        height: 30vh;
+    }
+    .logoRedes img{
+        font-size: 0.7em;
+        justify-self: center;
+    }
+    .logoRedes p{
+        margin-top: 2em;
+    }
+    /* ACOMODANDO LA INFORMACION DE LA CLASE POLITICAS */
+    .politicas a{   
+        font-size: 0.8em; 
+    }   
+    .derechosAutor{
+        font-size: 0.8em;
+        padding: 1em 0;
+        margin-bottom: 5em;
+        text-align: center
+    }
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
