@@ -19,7 +19,7 @@ body{
 }
 /* ---------------------------------EMPIEZA EL DESARROLLO DEL BANNER DEL DESTINO--------------------------------- */
 .bannerDestino4{
-    background: linear-gradient(rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 1)), url("/Imagenes/lagoTiticaca.jpg");
+    background: linear-gradient(rgba(16, 20, 25, 0.2), rgba(16, 20, 25, 0.4), rgba(16, 20, 25, 1)), url(./Imagenes/lagoTiticaca.jpg);
     background-attachment: fixed;
     background-position: left;
     background-size: cover;
